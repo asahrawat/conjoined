@@ -20,14 +20,14 @@ public class Grounded2 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) 
     {
-        if (collision.collider.tag == "Ground") {
+        if (collision.collider.tag == "Ground" || collision.collider.tag == "Platform") {
             player2.GetComponent<Move2D_P2>().isGrounded2 = true;
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision) 
     {
-        if (collision.collider.tag == "Ground") {
+        if (collision.collider.tag == "Ground" || collision.collider.tag == "Platform") {
             player2.GetComponent<Move2D_P2>().isGrounded2 = false;
         }
     }
